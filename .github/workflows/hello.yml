@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Say hello to username
         run: echo "Hello $USER"
+
   details:
     runs-on: ubuntu-latest
     steps:
