@@ -1,207 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | DevOps Enthusiast</title>
 
-<title>Sheetal Chive | DevOps Portfolio</title>
-
-<meta name="description" content="Sheetal Chive - PHP Developer transitioning into AWS & DevOps Engineering.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
-/* ---------- Base ---------- */
-
-*{box-sizing:border-box}
-body{
+*{
 margin:0;
-font-family:system-ui,Segoe UI,Arial;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
-background: radial-gradient(1200px 800px at 10% 10%, rgba(255,120,0,.20), transparent 60%),
-            radial-gradient(1000px 700px at 90% 20%, rgba(70,160,255,.20), transparent 55%),
-            linear-gradient(180deg,#060914,#070a16,#070a12);
+overflow-x:hidden;
 }
 
-.container{
-width:min(1100px,92vw);
-margin:auto;
-}
+/* NAVBAR */
 
-/* ---------- Floating Orbs ---------- */
-
-.orb{
-position:absolute;
-border-radius:999px;
-filter:blur(50px);
-opacity:.6;
-}
-
-.one{width:400px;height:400px;background:#ff7a18;left:-100px;top:150px;}
-.two{width:350px;height:350px;background:#4aa3ff;right:-120px;top:200px;}
-.three{width:400px;height:400px;background:#b56bff;bottom:-200px;left:40%;}
-
-/* ---------- Navbar ---------- */
-
-.nav{
+nav{
+position:fixed;
+width:100%;
+top:0;
+backdrop-filter:blur(15px);
+background:rgba(255,255,255,0.05);
+padding:15px 10%;
 display:flex;
 justify-content:space-between;
-align-items:center;
-padding:20px 0;
+z-index:1000;
 }
 
-.logo{
-display:flex;
-gap:10px;
-align-items:center;
-}
-
-.logo-box{
-width:36px;
-height:36px;
-border-radius:10px;
-background:linear-gradient(135deg,#ff7a18,#b56bff);
-}
-
-.links{
-display:flex;
-gap:18px;
-}
-
-.links a{
-padding:8px 12px;
-border-radius:10px;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
 transition:.3s;
 }
 
-.links a:hover{
-background:rgba(255,255,255,.08);
-transform:translateY(-2px);
+nav a:hover{
+color:#00f7ff;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:600px;
+opacity:.9;
+margin-bottom:25px;
 }
 
 .btn{
-padding:10px 16px;
-border-radius:14px;
-border:1px solid rgba(255,255,255,.2);
-background:rgba(255,255,255,.06);
-cursor:pointer;
-transition:.25s;
-}
-
-.btn:hover{
-transform:translateY(-2px);
-background:rgba(255,255,255,.1);
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+margin:5px;
+transition:.3s;
+display:inline-block;
 }
 
 .primary{
-background:linear-gradient(135deg,#ff7a18,#b56bff);
-border:none;
+background:#00f7ff;
+color:black;
 }
 
-/* ---------- Glass Card ---------- */
+.primary:hover{
+transform:scale(1.1);
+}
+
+.secondary{
+border:1px solid #00f7ff;
+color:#00f7ff;
+}
+
+.secondary:hover{
+background:#00f7ff;
+color:black;
+}
+
+/* SECTION */
+
+section{
+padding:100px 10%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+font-size:35px;
+}
+
+/* GLASS CARD */
 
 .card{
-background:rgba(255,255,255,.08);
-border:1px solid rgba(255,255,255,.15);
-border-radius:22px;
-padding:22px;
-backdrop-filter:blur(12px);
-box-shadow:0 20px 60px rgba(0,0,0,.35);
-transition:.25s;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border-radius:15px;
+padding:25px;
+transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-4px);
+transform:translateY(-10px);
+background:rgba(255,255,255,0.15);
 }
 
-/* ---------- Hero ---------- */
+/* GRID */
 
-.hero{
+.grid{
 display:grid;
-grid-template-columns:1.3fr .7fr;
-gap:18px;
-padding-top:30px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-.title{
-font-size:44px;
-line-height:1.1;
-margin:12px 0;
+/* ROADMAP */
+
+.roadmap li{
+margin-bottom:10px;
 }
 
-.subtitle{
-opacity:.8;
-line-height:1.6;
-}
+/* TOOL ICONS */
 
-.hero-actions{
-margin-top:18px;
+.tools{
 display:flex;
-gap:12px;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:10px;
-margin-top:18px;
-}
-
-.stat{
-padding:14px;
-background:rgba(255,255,255,.05);
-border-radius:14px;
-}
-
-.stat b{
-display:block;
-font-size:16px;
-}
-
-.section{
-padding:70px 0;
-}
-
-.section h2{
-margin-bottom:20px;
-}
-
-.skills{
-display:flex;
+justify-content:center;
 flex-wrap:wrap;
-gap:10px;
+gap:30px;
+font-size:40px;
 }
 
-.chip{
-padding:8px 12px;
-border-radius:999px;
-background:rgba(255,255,255,.08);
-border:1px solid rgba(255,255,255,.15);
-font-size:13px;
+/* GALLERY */
+
+.gallery img{
+width:100%;
+border-radius:10px;
+transition:.4s;
 }
 
-.projects{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:16px;
+.gallery img:hover{
+transform:scale(1.1);
 }
 
-.footer{
+/* FOOTER */
+
+footer{
 text-align:center;
-padding:40px 0;
+padding:40px;
 opacity:.7;
-font-size:13px;
-}
-
-@media(max-width:900px){
-
-.hero{grid-template-columns:1fr}
-
-.projects{grid-template-columns:1fr}
-
-.stats{grid-template-columns:1fr}
-
-.links{display:none}
-
 }
 
 </style>
@@ -209,226 +174,178 @@ font-size:13px;
 
 <body>
 
-<div class="orb one"></div>
-<div class="orb two"></div>
-<div class="orb three"></div>
-
-<div class="container">
-
-<!-- NAVBAR -->
-
-<div class="nav">
-
-<div class="logo">
-<div class="logo-box"></div>
+<nav>
+<div>MyPortfolio</div>
 <div>
-<b>Sheetal Chive</b><br>
-<small>PHP • AWS • DevOps</small>
-</div>
-</div>
-
-<div class="links">
 <a href="#about">About</a>
-<a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
+<a href="#roadmap">Roadmap</a>
+<a href="#tools">Tools</a>
 <a href="#contact">Contact</a>
 </div>
-
-<button class="btn primary">Hire Me</button>
-
-</div>
+</nav>
 
 <!-- HERO -->
 
-<div class="hero">
+<section class="hero">
 
-<div class="card">
+<h1>Hello, I'm a DevOps Enthusiast</h1>
 
-<h1 class="title">
-I build web systems and I'm transitioning from 
-<span style="color:#ff7a18">PHP Development</span> 
-to 
-<span style="color:#4aa3ff">AWS & DevOps Engineering</span>
-</h1>
-
-<p class="subtitle">
-
-I am a web developer experienced in PHP and website development.  
-Currently I am learning Cloud, CI/CD and DevOps tools to become a modern cloud engineer.
-
+<p>
+Passionate about cloud computing, CI/CD pipelines and building scalable infrastructure.
 </p>
 
-<div class="hero-actions">
+<a class="btn primary" href="resume.pdf" download>Download Resume</a>
+<a class="btn secondary" href="https://github.com/">GitHub</a>
 
-<button class="btn primary">View Projects</button>
+<br><br>
 
-<button class="btn">Contact Me</button>
+<img src="https://visitor-badge.laobi.icu/badge?page_id=portfolio.visitors">
 
-</div>
-
-<div class="stats">
-
-<div class="stat">
-<b>PHP Development</b>
-<span>Backend experience</span>
-</div>
-
-<div class="stat">
-<b>AWS & DevOps</b>
-<span>Learning cloud automation</span>
-</div>
-
-<div class="stat">
-<b>GitHub Projects</b>
-<span>CI/CD practice</span>
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>Sheetal Chive</h3>
-
-<p>Web Developer • Future DevOps Engineer</p>
-
-<br>
-
-<p><b>Current Focus</b><br>AWS & DevOps Learning</p>
-
-<p><b>Development Stack</b><br>PHP, HTML, CSS, JavaScript</p>
-
-<p><b>Automation Interest</b><br>CI/CD with GitHub Actions</p>
-
-<p><b>Hobby</b><br>Nature Painting on Canvas</p>
-
-</div>
-
-</div>
+</section>
 
 <!-- ABOUT -->
 
-<div id="about" class="section">
+<section id="about">
 
-<h2>About</h2>
+<h2 class="section-title">About Me</h2>
 
 <div class="card">
 
 <p>
+I am passionate about DevOps, automation, and cloud technologies.  
+I enjoy learning how modern systems are deployed and managed efficiently.
 
-I am a passionate developer with experience in building websites using PHP and modern web technologies.
-
-Currently I am transitioning into **Cloud and DevOps engineering**, learning tools like AWS, CI/CD pipelines and automation workflows.
-
-My goal is to build scalable systems and automate infrastructure using modern DevOps practices.
-
+My interests include Linux systems, CI/CD automation, and containerization.
 </p>
 
 </div>
 
-</div>
-
-<!-- SKILLS -->
-
-<div id="skills" class="section">
-
-<h2>Skills</h2>
-
-<div class="card">
-
-<div class="skills">
-
-<span class="chip">PHP</span>
-<span class="chip">HTML</span>
-<span class="chip">CSS</span>
-<span class="chip">JavaScript</span>
-<span class="chip">Git</span>
-<span class="chip">GitHub</span>
-<span class="chip">AWS</span>
-<span class="chip">CI/CD</span>
-<span class="chip">GitHub Actions</span>
-<span class="chip">Linux Basics</span>
-
-</div>
-
-</div>
-
-</div>
+</section>
 
 <!-- PROJECTS -->
 
-<div id="projects" class="section">
+<section id="projects">
 
-<h2>Projects</h2>
+<h2 class="section-title">Projects</h2>
 
-<div class="projects">
+<div class="grid">
 
 <div class="card">
-
-<h3>Portfolio Website</h3>
-
-<p>
-
-Modern glassmorphism portfolio deployed using GitHub Pages.
-
-</p>
-
+<h3>AWS Static Website</h3>
+<p>Hosted a portfolio using AWS S3 and CloudFront with HTTPS.</p>
 </div>
 
 <div class="card">
-
-<h3>GitHub Actions CI/CD</h3>
-
-<p>
-
-Automated deployment pipeline for static websites using GitHub Actions.
-
-</p>
-
+<h3>CI/CD Pipeline</h3>
+<p>Automated deployment using GitHub Actions and GitHub Pages.</p>
 </div>
 
 <div class="card">
-
-<h3>PHP Dynamic Website</h3>
-
-<p>
-
-Dynamic website built with PHP and database integration.
-
-</p>
-
+<h3>Dockerized App</h3>
+<p>Containerized a web application using Docker.</p>
 </div>
 
 </div>
 
+</section>
+
+<!-- DEVOPS ROADMAP -->
+
+<section id="roadmap">
+
+<h2 class="section-title">DevOps Learning Journey</h2>
+
+<div class="card">
+
+<ul class="roadmap">
+
+<li>✔ Linux Basics</li>
+<li>✔ Git & GitHub</li>
+<li>✔ GitHub Actions CI/CD</li>
+<li>✔ Web Hosting</li>
+<li>🔄 Docker (Learning)</li>
+<li>🔄 AWS Cloud (Learning)</li>
+<li>⏳ Kubernetes (Next Step)</li>
+
+</ul>
+
 </div>
+
+</section>
+
+<!-- TOOLS -->
+
+<section id="tools">
+
+<h2 class="section-title">Tools & Technologies</h2>
+
+<div class="tools">
+
+<span>🐧</span>
+<span>🐙</span>
+<span>☁</span>
+<span>🐳</span>
+<span>⚙</span>
+<span>💻</span>
+
+</div>
+
+</section>
+
+<!-- GITHUB STATS -->
+
+<section>
+
+<h2 class="section-title">GitHub Activity</h2>
+
+<div style="text-align:center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=YOURUSERNAME&show_icons=true&theme=tokyonight">
+
+</div>
+
+</section>
+
+<!-- PAINTING GALLERY -->
+
+<section>
+
+<h2 class="section-title">Creative Corner</h2>
+
+<div class="grid gallery">
+
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+
+<img src="https://images.unsplash.com/photo-1493244040629-496f6d136cc3">
+
+</div>
+
+</section>
 
 <!-- CONTACT -->
 
-<div id="contact" class="section">
+<section id="contact">
 
-<h2>Contact</h2>
+<h2 class="section-title">Contact</h2>
 
 <div class="card">
 
-<p>Email: your-email@gmail.com</p>
-
+<p>Email: your@email.com</p>
 <p>GitHub: github.com/yourusername</p>
-
 <p>LinkedIn: linkedin.com/in/yourprofile</p>
 
 </div>
 
-</div>
+</section>
 
-<div class="footer">
+<footer>
 
-© 2026 Sheetal Chive • DevOps Learning Journey
+<p>© 2026 My Portfolio</p>
 
-</div>
-
-</div>
+</footer>
 
 </body>
 </html>
