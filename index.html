@@ -1,26 +1,387 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sheetal Chive | DevOps Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+min-height:100vh;
+
+}
+
+nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+position:sticky;
+top:0;
+
+backdrop-filter: blur(15px);
+background: rgba(255,255,255,0.05);
+
+}
+
+nav h2{
+
+font-weight:600;
+letter-spacing:1px;
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+
+}
+
+nav ul li{
+
+margin-left:30px;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+color:white;
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#00e0ff;
+
+}
+
+.hero{
+
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+}
+
+.hero span{
+
+color:#00e0ff;
+
+}
+
+.hero p{
+
+margin-top:10px;
+opacity:.8;
+
+}
+
+.btn{
+
+margin-top:30px;
+display:inline-block;
+padding:12px 30px;
+
+background:linear-gradient(45deg,#00e0ff,#4facfe);
+
+border-radius:30px;
+
+text-decoration:none;
+color:black;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+
+}
+
+section{
+
+padding:80px 10%;
+
+}
+
+.section-title{
+
+text-align:center;
+margin-bottom:50px;
+
+}
+
+.glass{
+
+background: rgba(255,255,255,0.1);
+
+backdrop-filter: blur(20px);
+
+border-radius:20px;
+
+padding:40px;
+
+box-shadow:0 10px 40px rgba(0,0,0,0.3);
+
+transition:.4s;
+
+}
+
+.glass:hover{
+
+transform:translateY(-10px);
+box-shadow:0 20px 60px rgba(0,0,0,0.4);
+
+}
+
+.skills{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+
+gap:20px;
+
+}
+
+.skill{
+
+padding:20px;
+
+text-align:center;
+
+border-radius:15px;
+
+background:rgba(255,255,255,0.08);
+
+transition:.4s;
+
+}
+
+.skill:hover{
+
+transform:scale(1.1);
+
+background:rgba(0,224,255,0.2);
+
+}
+
+.projects{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.project{
+
+padding:25px;
+
+border-radius:15px;
+
+background:rgba(255,255,255,0.08);
+
+transition:.4s;
+
+}
+
+.project:hover{
+
+transform:translateY(-10px) scale(1.03);
+
+background:rgba(255,255,255,0.15);
+
+}
+
+footer{
+
+text-align:center;
+
+padding:30px;
+
+opacity:.7;
+
+}
+
+</style>
+
 </head>
+
 <body>
-    <header>
-        <h1>John Doe</h1>
-        <nav><a href="#about">About</a> | <a href="#projects">Projects</a></nav>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Web developer specializing in HTML, CSS, and JS.</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Project 1 - <a href="#">Link</a></li>
-            <li>Project 2 - <a href="#">Link</a></li>
-        </ul>
-    </section>
-    <footer>
-        <p>Contact: john.doe@example.com</p>
-    </footer>
+
+<nav>
+
+<h2>Sheetal</h2>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
+<h1>Hello I'm <span>Sheetal Chive</span></h1>
+
+<p>PHP Developer | Future AWS & DevOps Engineer</p>
+
+<a href="#projects" class="btn">View My Work</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="glass">
+
+<p>
+
+I am a passionate web developer with experience in **PHP and website development**.  
+Currently I am expanding my expertise in **AWS, Cloud and DevOps technologies**.
+
+</p>
+
+<br>
+
+<p>
+
+I enjoy learning new technologies, building automation pipelines and improving my communication skills for global tech environments.
+
+</p>
+
+<br>
+
+<p>
+
+Outside coding, I love **painting nature scenes on canvas**, which helps me stay creative and balanced.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">PHP</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Git</div>
+<div class="skill">GitHub</div>
+<div class="skill">AWS (Learning)</div>
+<div class="skill">DevOps</div>
+<div class="skill">CI/CD</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<h3>Portfolio Website</h3>
+
+<p>Personal portfolio deployed using GitHub Pages and CI/CD.</p>
+
+</div>
+
+<div class="project">
+
+<h3>GitHub Actions Pipeline</h3>
+
+<p>Automated deployment pipeline using GitHub Actions.</p>
+
+</div>
+
+<div class="project">
+
+<h3>PHP Dynamic Website</h3>
+
+<p>Full website built using PHP and backend database integration.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="glass">
+
+<p>Email: your-email@gmail.com</p>
+
+<p>GitHub: github.com/yourusername</p>
+
+<p>LinkedIn: linkedin.com/in/yourprofile</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Sheetal Chive | DevOps Portfolio
+
+</footer>
+
 </body>
+
 </html>
