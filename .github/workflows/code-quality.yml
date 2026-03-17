@@ -1,17 +1,15 @@
-name: Python lint 
+name: code Quality
 
 on:
-    workflow_dispatch
-    # push:
-    #     branches: [main]
+    workflow_Call
 
 jobs:
     validate:
         runs-on: ubuntu-latest
-        strategy: 
+    strategy: 
             fail-fast: false
             matrix:
-                python-version: ["3.9","3.10","3.11","3.12"]
+                python-version: ["3.11","3.12"]
 
         steps:
             - name: checkout-code
@@ -28,4 +26,8 @@ jobs:
               
             - name: run linter
               run: flake8 app.py
+            
+            - name: run SAST
+              run: bandit -r app.py
 
+    
