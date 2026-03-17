@@ -1,7 +1,7 @@
 name: code Quality
 
 on:
-    workflow_Call
+    workflow_call
 
 jobs:
     validate:
